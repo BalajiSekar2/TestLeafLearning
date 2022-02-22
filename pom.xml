@@ -7,6 +7,7 @@
 
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependencies>
+
 	<dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
@@ -19,6 +20,22 @@
 	    <artifactId>poi-ooxml-schemas</artifactId>
 	    <version>4.1.2</version>
 	</dependency>
+
+	<dependency>
+	     <groupId>io.github.bonigarcia</groupId>
+	     <artifactId>webdrivermanager</artifactId>
+	     <version>5.0.3</version>
+	</dependency>
+
+	<dependency>
+	     <groupId>org.testng</groupId>
+	     <artifactId>testng</artifactId>
+	     <version>7.4.0</version>
+	</dependency>
+
+
+
+	
 
 </dependencies>
 </project>
