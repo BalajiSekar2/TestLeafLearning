@@ -1,4 +1,4 @@
-package week1.day2.assignment;
+package week1.assignment;
 
 public class MissingElementsInArray {
 

@@ -1,4 +1,4 @@
-package week1.day2;
+package week1.practice;
 
 public class Mobile {
 
