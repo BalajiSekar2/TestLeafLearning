@@ -9,7 +9,7 @@ public class SampleTest {
 		x.concat(y);
 		System.out.println(x);
 		
-		//
+		// abc
 		
 		
 	}
