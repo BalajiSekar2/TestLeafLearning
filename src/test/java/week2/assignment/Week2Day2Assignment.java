@@ -2,7 +2,6 @@ package week2.assignment;
 
 import java.time.Duration;
 
-import org.checkerframework.checker.units.qual.s;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class week2Day2Assignment {
+public class Week2Day2Assignment {
 	
 	public static WebDriver driver;
 
