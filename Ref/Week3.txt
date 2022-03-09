@@ -1,22 +1,21 @@
 ASSIGNMENTS -OOPs concept
-=============
+=========================================================================================================================
 Week3 Day1: 
-
+=========================================================================================================================
 Assignment1:
-===========
+=========================================================================================================================
      Package   :org.system
-     Class        :Computer
+     Class     :Computer
      Methods   :computerModel()
 
-     Class        :Desktop
+     Class     :Desktop
      Methods   :desktopSize()
 
 Description:
 create above 2 class and call all your class methods into the Desktop using single inheritance.
-
-
+=========================================================================================================================
 Assignment2:
-=============
+
      Package   :org.college
      Class     :College
      Methods   :collegeName(),collegeCode(),collegeRank()
@@ -31,9 +30,9 @@ Assignment2:
   
 Description:
 create above 3 class and call all your class methods into the Student using multilevel inheritance.
-
+=========================================================================================================================
 Assignment3:(overriding) 
-============
+
     Class     :BankInfo
     Methods :saving(),fixed(),deposit()
 
@@ -42,24 +41,53 @@ Assignment3:(overriding)
 
 Description:
 You have to override the method deposit in AxisBank.
-
+=========================================================================================================================
 Assignment 4:(Overloading) 
-==============
 
       Class: Students
       Methods: getStudentInfo()
 
 Description: 
 Create multiple getStudentInfo() method by passing id argument alone, by id & name, by email & phoneNumber
-
-==================================================
-
+=========================================================================================================================
 Assignment #5: (Strings)
-=============
 
 https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/mandatory/Palindrome.java
-
 https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/optional/Anagram.java
 https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/classroom/string/CharOccurance.java
 https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/classroom/string/FindTypes.java
 https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/mandatory/ReverseEvenWords.java
+=========================================================================================================================
+
+
+
+=========================================================================================================================
+Week 3 Day 2
+=========================================================================================================================
+Assignment on :(Collections-using List and Set)
+
+The pseudocode has steps to implement using arrays.
+But, now do the same set of programs using Collections. 
+
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/mandatory/RemoveDuplicates.java
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/mandatory/FindIntersection.java
+https://github.com/TestLeafPages/SeleniumAssignments/tree/master/week1/day2/classroom/arrays
+
+Apply all the learn concept............
+
+SAMPLE PROGRAM TO IMPLEMENT List :
+=========================================================================================================================
+ NOTE: Java code is attached for your reference.
+
+1. Launch the URL https://www.ajio.com/
+2. In the search box, type as "bags" and press enter
+3. To the left  of the screen under " Gender" click the "Men"
+4. Under "Category" click "Fashion Bags"
+5. Print the count of the items Found. 
+6. Get the list of brand of the products displayed in the page and print the list.
+7. Get the list of names of the bags and print it
+
+
+=========================================================================================================================
+https://github.com/nishokiyer/Test-leaf---Selenium/tree/main/week3/day1
+https://github.com/nishokiyer/Test-leaf---Selenium/tree/main/week3/day2
