@@ -75,7 +75,7 @@ Day 2 Assignment:
 
 Assignment:1
 FaceBook:
-================================
+=========================================================================================================================
 // Step 1: Download and set the path 
 // Step 2: Launch the chromebrowser
 // Step 3: Load the URL https://en-gb.facebook.com/
