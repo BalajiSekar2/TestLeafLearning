@@ -21,7 +21,7 @@ Step7: Click New button
 Step8: Select a value for Caller and Enter value for short_description
 Step9: Read the incident number and save it a variable
 Step10: Click on Submit button
-Step 11: Search the same incident number in the next search screen as below
+Step11: Search the same incident number in the next search screen as below
 Step12: Verify the incident is created successful and take snapshot of the created incident.
 =========================================================================================================================
 Assignment 3: (Frames)
@@ -81,17 +81,17 @@ NOTE : The given documents are only to create the instance and not to automate.
 
 =========================================================================================================================
 Week 4: day2
-🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓
+=========================================================================================================================
 Assignment 1:  (Actions)
-=============
+-------------------------------------------------------------------------------------------------------------------------
 1.https://jqueryui.com/resizable
 2.http://www.leafground.com/pages/drag.html
 3.http://www.leafground.com/pages/drop.html
 4.http://www.leafground.com/pages/selectable.html
 5.http://www.leafground.com/pages/sortable.html
-
+=========================================================================================================================
 Assignment 2:
-=============
+-------------------------------------------------------------------------------------------------------------------------
 1) Go to https://www.nykaa.com/
 2) Mouseover on Brands and Search L'Oreal Paris
 3) Click L'Oreal Paris
@@ -110,9 +110,9 @@ Assignment 2:
 16) Click on Continue as Guest
 17) Check if this grand total is the same in step 14
 18) Close all windows
-
+=========================================================================================================================
 Assignment 3:
-============
+-------------------------------------------------------------------------------------------------------------------------
 1. Launch https://www.snapdeal.com/
 2. Go to Mens Fashion
 3. Go to Sports Shoes
@@ -129,21 +129,20 @@ Assignment 3:
 14. Take the snapshot of the shoes.
 15. Close the current window
 16. Close the main window
-
-
+=========================================================================================================================
 4 Assignment for Webtable :
-==================
+-------------------------------------------------------------------------------------------------------------------------
 1.http://www.leafground.com/pages/table.html 
 2.http://www.leafground.com/pages/sorttable.html
 
 *Note the instructions(pseudocode) are given below the  table given in the application
-
+=========================================================================================================================
 5 Assignments on Explicit Wait:
-======================
+-------------------------------------------------------------------------------------------------------------------------
 http://www.leafground.com/pages/disapper.html
 http://www.leafground.com/pages/appear.html
 http://www.leafground.com/pages/TextChange.html
 
 Note the instructions(pseudocode) are given below the  table given in the application
-
 *Apply screenshot concept in both the assignment
+=========================================================================================================================
