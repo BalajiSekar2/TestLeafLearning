@@ -146,3 +146,58 @@ http://www.leafground.com/pages/TextChange.html
 Note the instructions(pseudocode) are given below the  table given in the application
 *Apply screenshot concept in both the assignment
 =========================================================================================================================
+
+
+WebElement sortcheck = driver.findElement(By.id("chkSelectDateOnly"));
+        sortcheck.click();
+        String trainname = driver.findElement(By.xpath("//table[@class='DataTable TrainList TrainListHeader']//tr[1]/td[2]")).getText();
+        //System.out.println(trainname);
+        List<WebElement> rows = driver.findElements(By.xpath("//table[@class='DataTable TrainList TrainListHeader']//tr"));
+        System.out.println(rows.size());//size of the row
+        //List<String>tain=new ArrayList<String>();
+        for (int i =1; i < rows.size(); i++) {
+            String alltrain = driver.findElement(By.xpath("//table[@class='DataTable TrainList TrainListHeader']//tr["+i+"]/td[2]")).getText();
+            //System.out.println(alltrain);
+            if (alltrain .contains("CHENNAI")) {
+                System.out.println(alltrain);
+                
+            }
+            
+        }
+        }
+}
+
+from Mohan (TestLeaf) to everyone:    7:35 PM
+//div[@class='sort-selected']
+
+
+
+
+
+6. Sort by Low to High
+7. Check if the items displayed are sorted correctly
+8.Select the price range (900-1200)
+9.Filter with color Navy 
+10 verify the all applied filters 
+11. Mouse Hover on first resulting Training shoes
+12. click QuickView button
+13. Print the cost and the discount percentage
+14. Take the snapshot of the shoes.
+15. Close the current window
+16. Close the main window
+
+from Mohan (TestLeaf) to everyone:    7:37 PM
+//span[@class='lfloat product-price']
+
+
+list<>price=driver.fi(//span[@class='lfloat product-price'])
+List<Interger>pricesize=new ArrayList<Interger>();
+for(i=0;i<=price.size();i++);
+ string sort=price.get(i).getText()
+     string sortvalue=sort.replaceAll([^0-9],"");
+ int number=Integer.parseInt(sortvalue)//398
+pricesize.add(number);
+List<Integer>pricesize2=new ArrayList<Integer>();
+pricesize2.addall(pricesize);
+collections.sort(pricesize2);
+if(pricesize.equal(pricesize2);
