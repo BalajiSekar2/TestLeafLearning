@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="82606" started-at="2022-03-20T11:19:57 IST" finished-at="2022-03-20T11:21:20 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="82606" started-at="2022-03-20T11:19:57 IST" finished-at="2022-03-20T11:21:20 IST">
+      <class name="week5.practice.DuplicateLead">
+        <test-method status="PASS" signature="initalizeBrowser(java.lang.String,java.lang.String)[pri:0, instance:week5.practice.DuplicateLead@4524411f]" name="initalizeBrowser" is-config="true" duration-ms="15017" started-at="2022-03-20T11:19:57 IST" finished-at="2022-03-20T11:20:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://leaftaps.com/opentaps/control/main]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method status="PASS" signature="createLead(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:week5.practice.DuplicateLead@4524411f]" name="createLead" duration-ms="20302" started-at="2022-03-20T11:20:12 IST" data-provider="getData" finished-at="2022-03-20T11:20:33 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demosalesmanager]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="initalizeBrowser(java.lang.String,java.lang.String)[pri:0, instance:week5.practice.DuplicateLead@4524411f]" name="initalizeBrowser" is-config="true" duration-ms="5859" started-at="2022-03-20T11:20:33 IST" finished-at="2022-03-20T11:20:38 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://leaftaps.com/opentaps/control/main]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method status="PASS" signature="createLead(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:week5.practice.DuplicateLead@4524411f]" name="createLead" duration-ms="16448" started-at="2022-03-20T11:20:38 IST" data-provider="getData" finished-at="2022-03-20T11:20:55 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demosalesmanager]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="initalizeBrowser(java.lang.String,java.lang.String)[pri:0, instance:week5.practice.DuplicateLead@4524411f]" name="initalizeBrowser" is-config="true" duration-ms="6144" started-at="2022-03-20T11:20:55 IST" finished-at="2022-03-20T11:21:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://leaftaps.com/opentaps/control/main]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method status="PASS" signature="createLead(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:week5.practice.DuplicateLead@4524411f]" name="createLead" duration-ms="18677" started-at="2022-03-20T11:21:01 IST" data-provider="getData" finished-at="2022-03-20T11:21:20 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demosalesmanager]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+      </class> <!-- week5.practice.DuplicateLead -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

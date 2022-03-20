@@ -17,7 +17,7 @@ public class Day2Assignment4WebTables {
 
 	public static void main(String[] args) {
 		Day2Assignment4WebTables obj = new Day2Assignment4WebTables();
-		//obj.playWithTables();
+		obj.playWithTables();
 		obj.sortTable();
 	}
 	
