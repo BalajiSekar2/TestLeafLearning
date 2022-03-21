@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-<parameter name="URL" value="http://leaftaps.com/opentaps/control/main"></parameter>
+<suite name="Suite" verbose="2">
 
-  <test thread-count="5" name="Test">
-	<parameter name="BROWSER_NAME" value="edge"></parameter>
+	 <test thread-count="5" name="Create Lead">
+		<parameter name="BROWSER_NAME" value="edge"></parameter>
+		<parameter name="URL" value="http://leaftaps.com/opentaps/control/main"></parameter>
+	    <classes>
+	      <!--class name="week5.CreateLead"/-->
+	    </classes>
+	  </test> <!-- Create Lead -->
 
-    <classes>
-      <class name="week5.practice.DuplicateLead"/>
-    </classes>
-
-  </test> <!-- Test -->
+	<test thread-count="5" name="Edit Lead">
+		<parameter name="BROWSER_NAME" value="chrome"></parameter>
+		<parameter name="URL" value="http://leaftaps.com/opentaps/control/main"></parameter>
+	    <classes>
+	      <!--class name="week5.EditLead"/-->
+	    </classes>
+	</test> <!-- Edit Lead--> 
+		
+	<test thread-count="5" name="Duplicate Lead">
+		<parameter name="BROWSER_NAME" value="edge"></parameter>
+		<parameter name="URL" value="http://leaftaps.com/opentaps/control/main"></parameter>
+	    <classes>
+	      <!--class name="week5.DuplicateLead"/-->
+	    </classes>
+	</test> <!-- Duplicate Lead--> 	
+		
+	<test thread-count="5" name="Delete Lead">
+		<parameter name="BROWSER_NAME" value="chrome"></parameter>
+		<parameter name="URL" value="http://leaftaps.com/opentaps/control/main"></parameter>
+	    <classes>
+	      <class name="week5.DeleteLead"/>
+	    </classes>
+	</test> <!-- Duplicate Lead--> 
+  	
+  	
 </suite> <!-- Suite -->

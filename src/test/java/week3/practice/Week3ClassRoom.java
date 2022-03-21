@@ -72,7 +72,6 @@ public class Week3ClassRoom {
 		}
 	}
 	
-	
 	public static void findVowels() {
 		
 		int counter=0;
@@ -87,7 +86,6 @@ public class Week3ClassRoom {
 		System.out.println("Number of Vowels Present::"+counter);
 		
 	}
-	
 	
 	public static void findStartsWith() {
 		

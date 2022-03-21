@@ -1,7 +1,7 @@
 package week2.practice;
 
+import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -89,10 +89,10 @@ public class SampleSeleniumTest {
 				// Select sourceList = new Select();
 				sourceList.selectByIndex(4);
 				
-				driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 				sourceList.selectByValue("LEAD_PARTNER");
-				driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 				sourceList.selectByVisibleText("Conference");
 
@@ -131,7 +131,7 @@ public class SampleSeleniumTest {
 				//WebElement createPageTitle = driver.findElement(By.id("sectionHeaderTitle_leads"));
 				//System.out.println("Page Title of resulting page after creating Lead is " + createPageTitle.getText());
 				System.out.println("Page Title is "+driver.getTitle());
-				driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 				// close browser
 				driver.quit();

@@ -12,7 +12,6 @@ public class SBI implements RBI {
 		System.out.println("Provide Debit Card");
 	}
 
-	
 	public void provideCreditCard() {
 		System.out.println("Provide Credit Card");
 	}

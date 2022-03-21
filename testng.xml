@@ -6,14 +6,14 @@
   <test name="CreateLead-Chrome">
 	<parameter name="BROWSER_NAME" value="chrome"></parameter>
 	<classes>
-		<class name="week5.practice.ClassRoom"> </class>
+		<class name="week5.ClassRoom"> </class>
 	</classes>
   </test> <!-- Test -->
 
  <test name="CreateLead-Edge">
 	<parameter name="BROWSER_NAME" value="edge"></parameter>
 	<classes>
-		<class name="week5.practice.ClassRoom"> </class>
+		<class name="week5.ClassRoom"> </class>
 	</classes>
   </test> <!-- Test -->
 
