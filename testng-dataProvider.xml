@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" verbose="2">
+<suite name="Suite" verbose="2" parallel="tests" thread-count="5">
 
 	 <test thread-count="5" name="Create Lead">
 		<parameter name="BROWSER_NAME" value="edge"></parameter>
 		<parameter name="URL" value="http://leaftaps.com/opentaps/control/main"></parameter>
 	    <classes>
-	      <!--class name="week5.CreateLead"/-->
+	      <class name="week5.CreateLead"/>
 	    </classes>
 	  </test> <!-- Create Lead -->
 
@@ -14,7 +14,7 @@
 		<parameter name="BROWSER_NAME" value="chrome"></parameter>
 		<parameter name="URL" value="http://leaftaps.com/opentaps/control/main"></parameter>
 	    <classes>
-	      <!--class name="week5.EditLead"/-->
+	      <class name="week5.EditLead"/>
 	    </classes>
 	</test> <!-- Edit Lead--> 
 		
@@ -22,7 +22,7 @@
 		<parameter name="BROWSER_NAME" value="edge"></parameter>
 		<parameter name="URL" value="http://leaftaps.com/opentaps/control/main"></parameter>
 	    <classes>
-	      <!--class name="week5.DuplicateLead"/-->
+	      <class name="week5.DuplicateLead"/>
 	    </classes>
 	</test> <!-- Duplicate Lead--> 	
 		
@@ -33,6 +33,22 @@
 	      <class name="week5.DeleteLead"/>
 	    </classes>
 	</test> <!-- Duplicate Lead--> 
+		
+	<test thread-count="5" name="Create Contact">
+		<parameter name="BROWSER_NAME" value="edge"></parameter>
+		<parameter name="URL" value="http://leaftaps.com/opentaps/control/main"></parameter>
+	    <classes>
+	      <class name="week5.CreateContact"/>
+	    </classes>
+	</test> <!-- Create Contact--> 
+		
+	<test thread-count="5" name="Service Now">
+		<parameter name="BROWSER_NAME" value="chrome"></parameter>
+		<parameter name="URL" value="https://dev58945.service-now.com/login.do?user_name=admin&amp;sys_action=sysverb_login&amp;user_password=QrYgEdTecW32"></parameter>
+	    <classes>
+	      <class name="week5.ServiceNow"/>
+	    </classes>
+	</test> <!-- Service Now--> 		
   	
   	
 </suite> <!-- Suite -->
