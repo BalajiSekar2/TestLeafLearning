@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="week5.CreateContact">
+      <class name="week5.LearnAtrributes">
         <methods>
-          <include name="createContact"/>
+          <include name="tc003"/>
         </methods>
-      </class> <!-- week5.CreateContact -->
+      </class> <!-- week5.LearnAtrributes -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,3 +1,2 @@
 Sample Application: http://leaftaps.com/opentaps/control/main
-
 Git Path: https://github.com/TestLeafPages/Selenium_Feb_2022/tree/main
