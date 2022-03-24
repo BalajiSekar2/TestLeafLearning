@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+	<suite name="Service Now" verbose="2" >
+
+   	<test thread-count="5" name="Service Now Create Incident">
+		<parameter name="BROWSER_NAME" value="chrome"></parameter>
+		<parameter name="URL" value="https://dev58945.service-now.com/login.do?user_name=admin&amp;sys_action=sysverb_login&amp;user_password=QrYgEdTecW32"></parameter>
+	    <classes>
+	      <!--class name="week5.ServiceNow_CreateIncident"/-->
+	    </classes>
+	</test> <!-- Service Now Create Incident-->
+
+	<test thread-count="5" name="Service Now Update Incident">
+		<parameter name="BROWSER_NAME" value="chrome"></parameter>
+		<parameter name="URL" value="https://dev58945.service-now.com/login.do?user_name=admin&amp;sys_action=sysverb_login&amp;user_password=QrYgEdTecW32"></parameter>
+	    <classes>
+	      <class name="week5.ServiceNow_UpdateIncident"/>
+	    </classes>
+	</test> <!-- Service Now Update Incident-->
+	
+  
+</suite> <!-- Service Now -->
