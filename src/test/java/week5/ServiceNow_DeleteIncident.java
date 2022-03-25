@@ -9,21 +9,27 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ServiceNow_UpdateIncident extends ProjectSpecificMethods{
-
+public class ServiceNow_DeleteIncident extends ProjectSpecificMethods{
+	
 	@BeforeTest
-	public void setData() {
+	public void getData() {
 		excelFilePath="./TestData/TestData - ServiceNow.xlsx";
-		sheet="SN_UpdateIncident";
+		sheet="SN_DeleteIncident";
 	}
 	
 	@Test(dataProvider="getDataFromExcel")
-	public void updateIncident(String userName,String passWord,String description,String updatedNotes) {
+	public void deleteIncident(String userName,String passWord) throws InterruptedException {
+		
+//		1. Launch ServiceNow application
+//		2. Login with valid credentials 
+//		3. Enter Incident in filter navigator and press enter"
+//		4. Search for the existing incident and navigate into the incident
+//		5. Delete the incident
+//		6. Verify the deleted incident
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		
@@ -37,10 +43,8 @@ public class ServiceNow_UpdateIncident extends ProjectSpecificMethods{
 		driver.findElement(By.xpath("(//div[text()='All'][@class='sn-widget-list-title'])[2]")).click();
 		
 		driver.switchTo().frame(0);
-		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[text()='New']")));
 		driver.findElement(By.xpath("//button[text()='New']")).click();
 		
-		// select caller name from lookup
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lookup.incident.caller_id")));
 		driver.findElement(By.id("lookup.incident.caller_id")).click();
 
@@ -55,7 +59,7 @@ public class ServiceNow_UpdateIncident extends ProjectSpecificMethods{
 		driver.switchTo().window(parentWindow);
 		driver.switchTo().frame(0);		
 		
-		driver.findElement(By.id("incident.short_description")).sendKeys(description);
+		driver.findElement(By.id("incident.short_description")).sendKeys("Test");
 		String incidentNum = driver.findElement(By.name("incident.number")).getAttribute("value");
 		System.out.println("Incident Number::"+incidentNum);
 		
@@ -65,36 +69,24 @@ public class ServiceNow_UpdateIncident extends ProjectSpecificMethods{
 		driver.findElement(By.xpath("(//label[text()='Search'])[2]//following-sibling::input")).sendKeys(incidentNum,Keys.ENTER);
 		driver.findElement(By.xpath("//a[text()='"+incidentNum+"']")).click();
 		
-		WebElement urgency = driver.findElement(By.xpath("//select[@aria-labelledby='label.incident.urgency']"));
-		Select urgencyList = new Select(urgency);
-		urgencyList.selectByVisibleText("1 - High");
-		
-		WebElement state = driver.findElement(By.xpath("//select[@aria-labelledby='label.incident.state']"));
-		Select stateList = new Select(state);
-		stateList.selectByVisibleText("In Progress");
-		
-		driver.findElement(By.xpath("(//*[@placeholder='Work notes'])[1]")).sendKeys(updatedNotes);
-		driver.findElement(By.xpath("(//button[text()='Update'])[1]")).click();
+		Thread.sleep(3000);		
+		driver.findElement(By.xpath("(//button[text()='Delete'])[1]")).click();
+		driver.findElement(By.xpath("//button[@id='ok_button']")).click();
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[text()='New']")));
-		driver.findElement(By.xpath("(//label[text()='Search'])[2]//following-sibling::input")).sendKeys(incidentNum);
-		driver.findElement(By.xpath("//a[text()='"+incidentNum+"']")).click();
+//		driver.findElement(By.xpath("(//label[text()='Search'])[2]//following-sibling::input")).sendKeys(incidentNum);
+//		driver.findElement(By.xpath("//a[text()='"+incidentNum+"']")).click();
 		
-		String urgencyVal = driver.findElement(By.xpath("//select[@aria-labelledby='label.incident.urgency']")).getText();
-		String stateVal = driver.findElement(By.xpath("//select[@aria-labelledby='label.incident.state']")).getText();
+		WebElement noRecord = driver.findElement(By.xpath("//td[text()='No records to display']"));
 		
-		if(urgencyVal.contains("High")) {
-			System.out.println("Urgency Value is updated successfully");
+		if(noRecord.isDisplayed()) {
+			System.out.println("Incident deleted successfully");
 		}else {
-			System.out.println("Urgency Value is not updated successfully");
+			System.out.println("Incident not deleted");
 		}
 		
-		if(stateVal.contains("Progress")) {
-			System.out.println("Progress Value is updated successfully");
-		}else {
-			System.out.println("Progress Value is not updated successfully");
-		}
 		
 	}
 	
+
 }

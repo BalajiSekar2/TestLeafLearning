@@ -45,7 +45,7 @@ public class ProjectSpecificMethods {
 	
 	@AfterMethod
 	public void afterMethod() {
-		//driver.close();
+		driver.close();
 	}
 
 }

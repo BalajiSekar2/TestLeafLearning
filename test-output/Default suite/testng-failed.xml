@@ -3,11 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="week5.LearnAtrributes">
+      <class name="week5.ServiceNow_DeleteIncident">
         <methods>
-          <include name="tc003"/>
+          <include name="deleteIncident"/>
+          <include name="getData"/>
+          <include name="afterMethod"/>
+          <include name="initalizeBrowser"/>
         </methods>
-      </class> <!-- week5.LearnAtrributes -->
+      </class> <!-- week5.ServiceNow_DeleteIncident -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

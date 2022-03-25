@@ -9,21 +9,28 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ServiceNow_UpdateIncident extends ProjectSpecificMethods{
-
+public class ServiceNow_AssignIncident extends ProjectSpecificMethods{
+	
 	@BeforeTest
-	public void setData() {
+	public void setData(){
 		excelFilePath="./TestData/TestData - ServiceNow.xlsx";
-		sheet="SN_UpdateIncident";
+		sheet="SN_AssignIncident";
 	}
 	
 	@Test(dataProvider="getDataFromExcel")
-	public void updateIncident(String userName,String passWord,String description,String updatedNotes) {
+	public void assignIncident(String userName,String passWord, String updatedNotes,String group) throws InterruptedException {
+		
+//		1. Launch ServiceNow application
+//		2. Login with valid credentials 
+//		3.  Enter Incident in filter navigator and press enter
+//		4. click on open and Search for the existing incident and click on  the incident
+//		5. Assign the incident to  Software group
+//		6. Update the incident with Work Notes
+//		7. Verify the Assignment group and Assigned for the incident
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		
@@ -55,7 +62,7 @@ public class ServiceNow_UpdateIncident extends ProjectSpecificMethods{
 		driver.switchTo().window(parentWindow);
 		driver.switchTo().frame(0);		
 		
-		driver.findElement(By.id("incident.short_description")).sendKeys(description);
+		driver.findElement(By.id("incident.short_description")).sendKeys("Test");
 		String incidentNum = driver.findElement(By.name("incident.number")).getAttribute("value");
 		System.out.println("Incident Number::"+incidentNum);
 		
@@ -65,36 +72,35 @@ public class ServiceNow_UpdateIncident extends ProjectSpecificMethods{
 		driver.findElement(By.xpath("(//label[text()='Search'])[2]//following-sibling::input")).sendKeys(incidentNum,Keys.ENTER);
 		driver.findElement(By.xpath("//a[text()='"+incidentNum+"']")).click();
 		
-		WebElement urgency = driver.findElement(By.xpath("//select[@aria-labelledby='label.incident.urgency']"));
-		Select urgencyList = new Select(urgency);
-		urgencyList.selectByVisibleText("1 - High");
+		driver.findElement(By.xpath("//button[@name='lookup.incident.assignment_group']//span[@class='icon icon-search']")).click();
 		
-		WebElement state = driver.findElement(By.xpath("//select[@aria-labelledby='label.incident.state']"));
-		Select stateList = new Select(state);
-		stateList.selectByVisibleText("In Progress");
+		Set<String> allWindowSet1 = driver.getWindowHandles();
+		List<String> allWinList1 = new ArrayList<String>(allWindowSet1);
+		String parentWindow1 = allWinList1.get(0);
+		String childWindow = allWinList1.get(1);
+
+		driver.switchTo().window(childWindow);
+		driver.findElement(By.xpath("(//input[@placeholder='Search'])[1]")).sendKeys(group,Keys.ENTER);
+		driver.findElement(By.xpath("//a[text()='Software']")).click();
+
+		driver.switchTo().window(parentWindow1);
+		driver.switchTo().frame(0);		
 		
-		driver.findElement(By.xpath("(//*[@placeholder='Work notes'])[1]")).sendKeys(updatedNotes);
+		Thread.sleep(3000);		
 		driver.findElement(By.xpath("(//button[text()='Update'])[1]")).click();
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[text()='New']")));
 		driver.findElement(By.xpath("(//label[text()='Search'])[2]//following-sibling::input")).sendKeys(incidentNum);
 		driver.findElement(By.xpath("//a[text()='"+incidentNum+"']")).click();
 		
-		String urgencyVal = driver.findElement(By.xpath("//select[@aria-labelledby='label.incident.urgency']")).getText();
-		String stateVal = driver.findElement(By.xpath("//select[@aria-labelledby='label.incident.state']")).getText();
+		String groupVal = driver.findElement(By.name("sys_display.incident.assignment_group")).getAttribute("value");
 		
-		if(urgencyVal.contains("High")) {
-			System.out.println("Urgency Value is updated successfully");
+		if(groupVal.equalsIgnoreCase("Software")) {
+			System.out.println("Assignment Group Value is updated successfully");
 		}else {
-			System.out.println("Urgency Value is not updated successfully");
-		}
-		
-		if(stateVal.contains("Progress")) {
-			System.out.println("Progress Value is updated successfully");
-		}else {
-			System.out.println("Progress Value is not updated successfully");
+			System.out.println("Assignment Group Value is not updated successfully");
 		}
 		
 	}
-	
+
 }

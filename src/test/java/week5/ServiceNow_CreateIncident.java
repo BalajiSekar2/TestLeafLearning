@@ -17,7 +17,7 @@ public class ServiceNow_CreateIncident extends ProjectSpecificMethods{
 
 	@BeforeTest
 	public void setData() {
-		excelFilePath="./TestData/TestData.xlsx";
+		excelFilePath="./TestData/TestData - ServiceNow.xlsx";
 		sheet="SN_CreateIncident";
 	}
 	
