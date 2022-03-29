@@ -6,7 +6,9 @@
       <class name="week6.practice.RunTest">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="initializeBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="runScenario" invocation-numbers="2"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- week6.practice.RunTest -->

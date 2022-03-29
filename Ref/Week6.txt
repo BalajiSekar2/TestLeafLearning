@@ -1,0 +1,19 @@
+Cucumber Assignment
+=========================================================================================================================
+Week 6 Day1
+=========================================================================================================================
+Cucumber :
+*Create a separate Feature file for all the 5 testcases of leaftaps and implement it
+Implement *Scenario Outline  (Wherever Applicable)
+Try to apply all your learnings in your script
+=========================================================================================================================
+Week6 day2
+Assignments on cucumber and Testng:
+=========================================================================================================================
+1.Implement tags for the test cases (@functional, @regression, @smoke and @sanity)
+2. Run all the @smoke and @snaity test scenarios using tags attribute in the @CucumberOptions
+3.Try to implement all the concepts that you learnt today in your testcases
+4..Implement the preconditions and postconditions using *Hooks Implementation and extend baseclass for all 5 testcases
+5.try implementing the retry analyzer in your failed testcases
+**Apply all your learnings in both leaftaps and Servicenow Application
+=========================================================================================================================

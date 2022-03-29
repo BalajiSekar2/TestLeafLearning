@@ -20,7 +20,26 @@ public class Assignment5CharOccurance {
 		// if is has increment the count
 		// print the count out of the loop
 		
-		String str = "welcome to chennai";
+//		String str = "welcome to chennai";W
+//		int count;
+//		
+//		char[] strarray = str.toCharArray();
+//		Arrays.sort(strarray);
+//		
+//		for(int i=0;i<=strarray.length-1;i++) {
+//			count=0;
+//			for(int j=i+1;j<=strarray.length-1;j++) {
+//				if(strarray[i]==strarray[j]) {
+//					count=count+1;
+//				}
+//			}
+//			System.out.println(strarray[i]+" is present "+(count+1)+" times in the String ");
+//			i=i+count;
+//		}
+//		
+		
+		String str = "aaaabbbccdd";
+		String val = "";
 		int count;
 		
 		char[] strarray = str.toCharArray();
@@ -33,10 +52,11 @@ public class Assignment5CharOccurance {
 					count=count+1;
 				}
 			}
-			System.out.println(strarray[i]+" is present "+(count+1)+" times in the String ");
+			//System.out.println(strarray[i]+" is present "+(count+1)+" times in the String ");
+			val = val + (count+1) + strarray[i];
 			i=i+count;
 		}
-		
+	System.out.println(val);	
 	}
 
 }
