@@ -9,6 +9,7 @@ And Enter the Password 'crmsfa'
 And Click on Login Button
 And Click on CRM/SFA link
 
+@regression
 Scenario: Edit Lead Positive Flow
 
 Given Create Lead link is available

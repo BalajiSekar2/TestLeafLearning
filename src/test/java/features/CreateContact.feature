@@ -9,6 +9,7 @@ And Enter the Password 'crmsfa'
 And Click on Login Button
 And Click on CRM/SFA link
 
+@smoke @sanity
 Scenario: Create Contact Positive flow
 
 Given Click Create contact link

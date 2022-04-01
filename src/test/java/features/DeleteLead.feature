@@ -9,10 +9,11 @@ And Enter the Password 'crmsfa'
 And Click on Login Button
 And Click on CRM/SFA link
 
+@sanity
 Scenario: Delete Lead Positive flow
 
 Given Click Find Leads link
-And Enter the PhoneNumber as '98'
+And Enter the PhoneNumber as '9'
 And Click on Find Leads button
 And Click on the First Search result
 Then Click on Delete Lead button and Verify

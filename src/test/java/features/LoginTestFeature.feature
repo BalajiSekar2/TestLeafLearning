@@ -5,6 +5,7 @@ Feature: Create Lead
 #And Load the leaftaps URL 'http://leaftaps.com/opentaps/control/main'
 #And Maximize the broswer
 
+@functional
 Scenario Outline: LeafTaps Login Mutiple data
 
 Given Enter the UserName <username>
@@ -16,13 +17,14 @@ Examples:
 |username|password|
 |'DemoSalesManager'|'crmsfa'|
 
-@Smoke
+@smoke @regression
 Scenario: LeafTaps Login Positive flow
 Given Enter the UserName 'DemoSalesManager'
 And Enter the Password 'crmsfa'
 When Click on Login Button
 Then Home screen should be displayed successfully
 
+@Sanity
 Scenario: LeafTaps Login Negative flow
 Given Enter the UserName 'DemoSalesManager'
 And Enter the Password 'crmsfa1'
