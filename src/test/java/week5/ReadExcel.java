@@ -18,7 +18,7 @@ public class ReadExcel {
 		// to find row count
 		int rowCount = sh.getLastRowNum();
 		System.out.println("Row Count::"+rowCount);
-		//to find column count
+		//to find column count	
 		int columnCount = sh.getRow(0).getLastCellNum();
 		System.out.println("Column Count::"+columnCount);
 		

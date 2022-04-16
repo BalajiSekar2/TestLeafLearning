@@ -1,2 +1,17 @@
 Sample Application: http://leaftaps.com/opentaps/control/main
 Git Path: https://github.com/TestLeafPages/Selenium_Feb_2022/tree/main
+
+Resume Website:
+Canva.com
+NovoResume
+
+Resume match: ATS Scanner	
+https://skillsyncer.com/
+Resume Worded	
+
+
+Connect to DB using Java and Integrate with Selenium Code
+https://youtu.be/XLw2rPkqfbw
+
+Interview Preparation Drive:
+https://drive.google.com/drive/folders/17X78RICY2X_jG-4vZf7uD8gv8e_Xdda6?usp=sharing
